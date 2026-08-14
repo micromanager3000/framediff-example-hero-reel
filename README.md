@@ -1,6 +1,18 @@
 # FrameDiff example · LightTwist reel
 
-The full **LightTwist brand reel** rebuilt in FrameDiff from [`docs/HERO-REEL-SPEC.md`](../../docs/HERO-REEL-SPEC.md)
+## Setup
+
+```sh
+git clone --recurse-submodules https://github.com/micromanager3000/framediff-example-hero-reel.git
+cd framediff-example-hero-reel
+npm install
+npm run dev
+```
+
+FrameDiff is pinned in `vendor/framediff` until its packages are published to npm. Update the
+pin with `git submodule update --remote vendor/framediff`, then validate and commit the gitlink.
+
+The full **LightTwist brand reel** rebuilt in FrameDiff from [`docs/HERO-REEL-SPEC.md`](https://github.com/micromanager3000/framediff/blob/main/docs/HERO-REEL-SPEC.md)
 — the spec extracted from the original After Effects + Remotion project. One FrameDiff composition:
 
 - **The footage edit** ([`edl.ts`](src/data/edl.ts)) — the EDL straight from the AE `LightTwist` comp: each
@@ -14,7 +26,7 @@ The full **LightTwist brand reel** rebuilt in FrameDiff from [`docs/HERO-REEL-SP
 
 ```sh
 npm install
-npm run dev --workspace examples/hero-reel   # scrub the reel; ⏺ Render for the MP4
+npm run dev   # scrub the reel; ⏺ Render for the MP4
 ```
 
 ## Faithful, not frame-exact
